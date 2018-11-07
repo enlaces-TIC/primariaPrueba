@@ -1,1 +1,1 @@
-https://github.com/enlaces-TIC/primariaPrueba.git
+https://github.com/enlaces-TIC/primariaPrueba
