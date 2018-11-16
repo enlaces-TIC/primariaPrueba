@@ -49,7 +49,6 @@ sup{
 .g-8{grid-area:g8}
 
 .grid{
-  border:2px solid #580c45;
   width:95%;
   margin:0vh auto;
   padding:1%;
@@ -274,53 +273,52 @@ sup{
                     MEDIAQUERYS
  ******************************************************** */
 
- @media (min-width: 767px){
-  .grid{
-    border:2px solid blue;
-    width:85%;
-    height:100vh;
-    margin:0vh auto;
-    padding:1%;
-    display:grid;
-    grid-gap:1rem;
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-    grid-template-areas:
-    "g1 g2 g3"
-    "g4 g5 g6"
-    "g7 g8 g8";
-  } 
-  .grid-group{
-    height:30vh;
-  }
-  .grid-group-title{
-    font-size: 4em;
-    margin-bottom: 0.3em;
-  } 
-  .g-1 .grid-group-title, .g-7 .grid-group-title{
-    font-size: 2.5em;
-  }
-  .grid-group-img{
-    max-height: 65%;
-  }
+ @media (min-width: 768px){
+    .grid{
+      width:85%;
+      height:100vh;
+      margin:0vh auto;
+      padding:1%;
+      display:grid;
+      grid-gap:1rem;
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+      grid-template-areas:
+      "g1 g2 g3"
+      "g4 g5 g6"
+      "g7 g8 g8";
+    } 
+    .grid-group{
+      height:30vh;
+    }
+    .grid-group-title{
+      font-size: 4em;
+      margin-bottom: 0.3em;
+    } 
+    .g-1 .grid-group-title, .g-7 .grid-group-title{
+      font-size: 2.5em;
+    }
+    .grid-group-img{
+      max-height: 65%;
+    }
 
- .g-8{
-  background: linear-gradient(rgba(254,250,229,.5), rgba(254,250,229,.5)),  url(../img/colegio.png);
+  .g-8{
+    background: linear-gradient(rgba(254,250,229,.5), rgba(254,250,229,.5)),  url(../img/colegio.png);
     background-position: left; 
-  background-repeat: no-repeat;
-  background-size: contain;
- }
-img.col{
-  visibility: hidden;
-}
-.grid-group-social{
-  position: absolute;
-  bottom: 2em;
-  right: 2em;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  img.col{
+    visibility: hidden;
+  }
+  .grid-group-social{
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+  }
 }
 
-@media (min-width: 1240px){
+@media (min-width: 1024px){
   .grid{
-    border:2px solid green;
     width:75%;
   }
   .firma{
