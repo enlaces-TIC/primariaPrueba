@@ -1,0 +1,282 @@
+@font-face {
+  font-family: 'scriptMTBold';
+     src: url('../fonts/scriptMTBold.eot');
+     src: url('../fonts/scriptMTBold.eot?#iefix') format('embedded-opentype'),
+          url('../fonts/scriptMTBold.woff') format('woff'),
+          url('../fonts/scriptMTBold.ttf') format('truetype'),
+          url('../fonts/scriptMTBold.woff2') format('woff');
+  
+    font-weight: normal;
+    font-style: normal;
+  }
+@viewport{
+  zoom: 1.0;
+  width: device-width;
+}
+
+ *, :after,:before{
+  padding:0;
+  margin:0;
+  border: 0 none;
+  box-sizing:border-box;
+}
+body{
+  background:#fefae5;
+  color:#3E362B;
+  text-shadow:1px 1px 1px rgba(255,255,255,0.75);
+  font-family: scriptMTBold;
+}
+a{
+  text-decoration:none;
+  color:#3E362B;
+}
+sup{
+  position:relative;
+  font-size:55%;
+  vertical-align:top;
+}
+.firma{
+  position: absolute;
+  bottom: 1%;
+  right: 1%;
+  max-height: 10%;
+  opacity: .5;
+  text-align: right;
+}
+
+.g-1{grid-area:g1;}
+.g-2{grid-area:g2;}
+.g-3{grid-area:g3;}
+.g-4{grid-area:g4;}
+.g-5{grid-area:g5;}
+.g-6{grid-area:g6;}
+.g-7{grid-area:g7;}
+.g-8{grid-area:g8;}
+
+.grid{
+  width:95%;
+  margin: 1rem auto;
+  display:grid;
+  grid-gap:1rem;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas:
+  "g1 g1"
+  "g2 g2"
+  "g3 g3"
+  "g4 g4"
+  "g5 g5"
+  "g6 g6"
+  "g7 g7"
+  "g8 g8";
+}  
+
+.grid-group{
+  max-width:100%;
+  height: 31.5vh;
+  border-radius:10px;
+  transition: all .7s ease-out;
+  box-shadow: 0 3px 8px 0 rgba(132, 101, 51, 0.6);
+}
+.grid-group:hover{
+  cursor:pointer;
+  box-shadow:
+    0 5px 10px 0 rgba(132, 101, 51, 0.6), 
+    0 17px 50px 0 rgba(132, 101, 51, 0.2);
+  color:#fefae5;
+  text-shadow: 0 1px 0 #fefae5,
+                  0 2px 0 #e5e1cc,
+                  0 3px 0 #cbc7b2,
+                  0 4px 0 #b2ae99,
+                  0 5px 0 #98947f,
+                  0 6px 1px rgba(0,0,0,.1),
+                  0 0 5px rgba(0,0,0,.1),
+                  0 1px 3px rgba(0,0,0,.3),
+                  0 3px 5px rgba(0,0,0,.2),
+                  0 5px 10px rgba(0,0,0,.25),
+                  0 10px 10px rgba(0,0,0,.2),
+                  0 20px 20px rgba(0,0,0,.15);
+  background-blend-mode: normal;
+}
+.grid-group:hover .firma{
+ 
+}
+.grid-group-title{
+  text-align: right;
+  font-size: 6em;
+  transition: all .7s ease-out;
+  padding:1.5rem;
+}
+.g-1 .grid-group-title, .g-7 .grid-group-title{
+  font-size: 3.5em;
+}
+.g-8 .grid-group-title{
+  font-size: 1.8em;
+  display: block;  
+}
+.g-8 .grid-group-title span{
+  font-size: .8em; 
+}
+.g-8 .grid-group-title span::before{
+  content: '\A';
+  white-space: pre;
+}
+  
+/*  *********************************
+             IMAGES 
+ ***********************************/
+
+.g-1{
+  background: url(../img/abc.svg) left 1.5rem bottom 1.5rem / 65% 65% no-repeat;
+}
+.g-2{
+  background: url(../img/addition.svg) left 1.5rem bottom 1.5rem / 65% 65% no-repeat;
+}
+.g-3{
+  background: url(../img/earth-globe.svg) left 1.5rem bottom 1.5rem / 65% 65% no-repeat;
+}
+.g-4{
+  background: url(../img/compass.svg) left 1.5rem bottom 1.5rem / 65% 65% no-repeat;
+}
+.g-5{
+  background: url(../img/mouse.svg) left 1.5rem bottom 1.5rem / 65% 65% no-repeat;  
+}
+.g-6{
+  background: url(../img/diploma-2.svg) left 1.5rem bottom 1.5rem / 65% 65% no-repeat;  
+}
+.g-7{
+  background: url(../img/flag-ing.png) left 4rem bottom 1.5rem / 40% 60% no-repeat;  
+}
+.g-8{
+  background: url(../img/COLE.JPG) 100% / cover no-repeat padding-box ; 
+}
+.g-1, .g-2, .g-3, .g-4, .g-5, .g-6, .g-7{
+  background-color: rgba(254,250,229,0.6);
+  background-blend-mode: lighten;
+  transition: all .7s ease-out;
+} 
+/*  *********************************
+             card: colegio 
+ ***********************************/
+.g-8{
+  position: relative;
+  display:row flex;
+  align-content: space-between;
+  background-color: rgba(254,250,229,0.5);
+  background-blend-mode: lighten;
+}
+
+/* SOCIAL */
+.grid-group-social{
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;   
+  bottom: 2%;
+  right: 10%;
+}
+.grid-group-social a .fa {
+  font-size: 1.5rem;
+  line-height: 3rem;
+  transition: 0.4s;
+}
+.grid-group-social a:nth-child(1) .fa {
+  color: #2f4779;
+}
+.grid-group-social a:nth-child(2) .fa {
+  color: #55acee;
+}
+.grid-group-social a:nth-child(3) .fa {
+  color: #cd201f;
+}
+.grid-group-social a:nth-child(4) .fa {
+  color: #000000;
+}
+.grid-group-social a {
+  position: relative;
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: .7em;
+  /* box-shadow: 10px 0px 10px rgba(132, 101, 51, 0.6); */
+  transition: 0.4s;
+}
+
+.grid-group-social a:nth-child(1):hover {
+  background: #3b5998;
+  transition: 0.4s;
+}
+.grid-group-social a:nth-child(1):hover .fa {
+  color: #fff;
+  transition: 0.4s;
+}
+.grid-group-social a:nth-child(2):hover {
+  background: #55acee;
+  transition: 0.4s;
+}
+.grid-group-social a:nth-child(2):hover .fa {
+  color: #fff;
+  transition: 0.4s;
+}
+.grid-group-social a:nth-child(3):hover {
+  background: #cd201f;
+  transition: 0.4s;
+}
+.grid-group-social a:nth-child(3):hover .fa {
+  color: #fff;
+  transition: 0.4s;
+}
+.grid-group-social a:nth-child(4):hover {
+  background: #da9007;
+  transition: 0.4s;
+}
+.grid-group-social a:nth-child(4):hover .fa {
+  color: #fff;
+  transition: 0.4s;
+}
+
+
+/* ********************************************************
+                    MEDIAQUERYS
+ ******************************************************** */
+ @media (max-width: 320px){
+  .grid-group-title{
+    font-size: 4em;
+  }
+  .g-1 .grid-group-title, .g-7 .grid-group-title{
+    font-size: 2.6em;
+  }
+  .g-8 .grid-group-title{
+    font-size: 1.3em;
+  }
+ }
+ @media (min-width: 768px){
+    .grid{
+      width:85%;
+      /* height:100vh; */
+      grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+      grid-auto-columns: 33%;
+      grid-template-areas:
+      "g1 g2 g3"
+      "g4 g5 g6"
+      "g7 g8 g8";
+    } 
+    .grid-group{
+      height:30vh;
+      min-height: 31vh;
+    }
+    .grid-group-title{
+      font-size: 4em;
+    } 
+    .g-1 .grid-group-title, .g-7 .grid-group-title{
+      font-size: 2.5em;
+    }
+} 
+
+@media (min-width: 1024px){
+  .grid{
+    width:75%; 
+  }
+}
+
