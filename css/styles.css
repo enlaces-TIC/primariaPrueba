@@ -9,6 +9,10 @@
     font-weight: normal;
     font-style: normal;
   }
+@viewport{
+  zoom: 1.0;
+  width: device-width;
+}
 
  *, :after,:before{
   padding:0;
@@ -40,19 +44,18 @@ sup{
   text-align: right;
 }
 
-.g-1{grid-area:g1}
-.g-2{grid-area:g2}
-.g-3{grid-area:g3}
-.g-4{grid-area:g4}
-.g-5{grid-area:g5}
-.g-6{grid-area:g6}
-.g-7{grid-area:g7}
-.g-8{grid-area:g8}
+.g-1{grid-area:g1;}
+.g-2{grid-area:g2;}
+.g-3{grid-area:g3;}
+.g-4{grid-area:g4;}
+.g-5{grid-area:g5;}
+.g-6{grid-area:g6;}
+.g-7{grid-area:g7;}
+.g-8{grid-area:g8;}
 
 .grid{
   width:95%;
-  max-width: 1248px;
-  margin:0 auto;
+  margin: 0 auto;
   padding:1%;
   display:grid;
   grid-gap:1rem;
@@ -73,7 +76,6 @@ sup{
   max-width:100%;
   height: 31.5vh;
   display: row flex;
-  padding:1.5rem 2.2rem; 
   border-radius:10px;
   transition: all .7s ease-out;
   box-shadow: 0 3px 8px 0 rgba(132, 101, 51, 0.6);
@@ -100,14 +102,13 @@ sup{
   background-blend-mode: normal;
 }
 .grid-group:hover .firma{
-  -webkit-filter: opacity(1) drop-shadow(0 0 0 white);
-  filter: opacity(1) drop-shadow(0 0 0 white);
-  
+ 
 }
 .grid-group-title{
   text-align: right;
   font-size: 6em;
   transition: all .7s ease-out;
+  padding:1.5rem;
 }
 .g-1 .grid-group-title, .g-7 .grid-group-title{
   font-size: 3.5em;
@@ -249,6 +250,7 @@ sup{
     .grid{
       width:85%;
       height:100vh;
+      margin:0vh auto;
       grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
       grid-template-areas:
       "g1 g2 g3"
@@ -269,6 +271,7 @@ sup{
 
 @media (min-width: 1024px){
   .grid{
-    width:75%;
+    width:75%;  margin: 0 auto; grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
   }
 }
+
